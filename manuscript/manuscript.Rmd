@@ -12,7 +12,7 @@ library("worcs")
 # and end that file with either open_data(yourdata), or closed_data(yourdata).
 # Then, uncomment the line below to load the original or synthetic data
 # (whichever is available), to allow anyone to reproduce your code:
-# load_data()
+load_data()
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -32,7 +32,7 @@ This is an R Markdown format used for publishing markdown documents to GitHub. W
 You can include R code in the document as follows:
 
 ```{r cars}
-summary(cars)
+summary(df)
 ```
 
 ## Including Plots
@@ -40,7 +40,20 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+plot(df$bill_length_mm, df$bill_depth_mm)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r include = FALSE}
+res <- lm(bill_length_mm~body_mass_g + flipper_length_mm, data = df)
+tab_coef <- summary(res)$coef
+write.csv(tab_coef, "tab_coef.csv", row.names = FALSE)
+```
+
+```{r echo = FALSE}
+tab_coef <- read.csv("tab_coef.csv", stringsAsFactors = FALSE)
+knitr::kable(tab_coef, digits = 2)
+```
+
+

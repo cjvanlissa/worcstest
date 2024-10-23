@@ -13,4 +13,6 @@ data:
     labels: value_labels_df.yml
 checksums:
   df.csv: 948d0bf337a12027c2b02516befca3ca
-  synthetic_df.csv: 1ca9fde91ade9ad87d3ff5e965cf9cb8
+  synthetic_df.csv: e4ed18cd79d445ad59ce2b340519eb25
+  manuscript/tab_coef.csv: e9aff642e5b105dedf209585436b5fb4
+endpoints: manuscript/tab_coef.csv
