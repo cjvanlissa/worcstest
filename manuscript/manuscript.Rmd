@@ -48,11 +48,10 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r include = FALSE}
 res <- lm(bill_length_mm~body_mass_g + flipper_length_mm, data = df)
 tab_coef <- summary(res)$coef
-write.csv(tab_coef, "tab_coef.csv", row.names = FALSE)
+saveRDS(tab_coef, "tab_coef.rdata")
 ```
 
 ```{r echo = FALSE}
-tab_coef <- read.csv("tab_coef.csv", stringsAsFactors = FALSE)
 knitr::kable(tab_coef, digits = 2)
 ```
 

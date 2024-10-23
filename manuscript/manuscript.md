@@ -53,11 +53,11 @@ You can also embed plots, for example:
 Note that the `echo = FALSE` parameter was added to the code chunk to
 prevent printing of the R code that generated the plot.
 
-| Estimate | Std..Error | t.value | Pr…t.. |
-|---------:|-----------:|--------:|-------:|
-|    -3.44 |       4.58 |   -0.75 |   0.45 |
-|     0.00 |       0.00 |    1.17 |   0.24 |
-|     0.22 |       0.03 |    6.86 |   0.00 |
+|                   | Estimate | Std. Error | t value | Pr(\>\|t\|) |
+|:------------------|---------:|-----------:|--------:|------------:|
+| (Intercept)       |    -3.44 |       4.58 |   -0.75 |        0.45 |
+| body_mass_g       |     0.00 |       0.00 |    1.17 |        0.24 |
+| flipper_length_mm |     0.22 |       0.03 |    6.86 |        0.00 |
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
