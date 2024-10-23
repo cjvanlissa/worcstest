@@ -27,5 +27,5 @@ jobs:
 
       - name: Check endpoints
         run: |
-          worcs::reproduce()
+          {print(worcs:::cs_fun("manuscript/tab_coef.rdata")); worcs::reproduce()}
         shell: Rscript {0}
