@@ -1,5 +1,10 @@
 # Readme <a href='https://osf.io/zcvbs/'><img src='worcs_icon.png' align="right" height="139" /></a>
 
+<!-- badges: start -->
+[![worcs_reproduce](https://github.com/cjvanlissa/worcstest/actions/workflows/worcs_reproduce.yaml/badge.svg)](https://github.com/cjvanlissa/worcstest/actions/workflows/worcs_reproduce.yaml)
+[![Codecov test coverage](https://codecov.io/gh/cjvanlissa/worcstest/graph/badge.svg)](https://app.codecov.io/gh/cjvanlissa/worcstest)
+<!-- badges: end -->
+
 <!-- Please add a brief introduction to explain what the project is about    -->
 
 ## Where do I start?
