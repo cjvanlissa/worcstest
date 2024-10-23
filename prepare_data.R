@@ -4,11 +4,9 @@
 # to store the data.
 
 library(worcs)
-library(tidySEM)
 df <- read.csv("penguins.csv", stringsAsFactors = FALSE)
 df[["sex"]] <- NULL
-desc <- descriptives(df)
-cats <- desc$name[desc$type == "character"]
+cats <- sapply(df, inherits, what = "character")
 df[cats] <- lapply(df[cats], factor)
 
 closed_data(df)
